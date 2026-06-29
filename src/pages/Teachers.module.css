@@ -1,0 +1,347 @@
+.page {
+    min-height: 100vh;
+    background: #fdfdfd;
+    padding-bottom: 5rem;
+}
+
+.controlsWrapper {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.searchBox {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1.25rem 1rem 3.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(var(--secondary-rgb), 0.1);
+}
+
+.clearSearch {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f1f5f9;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.tabsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.filterLabel {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tab {
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: white;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab:hover {
+    background: #f8fafc;
+}
+
+.tab.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+}
+
+.groupsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.subjectGroup {
+    scroll-margin-top: 100px;
+}
+
+.groupHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.groupHeader h2 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.groupHeader svg {
+    color: var(--secondary);
+}
+
+.count {
+    margin-left: auto;
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fallbackLogo {
+    object-fit: contain !important;
+    padding: 1.5rem;
+    background: #f8fafc;
+}
+
+.roleBadge {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.info {
+    padding: 1.5rem;
+}
+
+.name {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.qual {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    min-height: 2rem;
+}
+
+.classes {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+}
+
+.subjectsTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.subjectTag {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.loader {
+    text-align: center;
+    padding: 5rem;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .imageWrapper {
+        display: none;
+    }
+
+    .card {
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .info {
+        padding: 1.25rem;
+    }
+
+    .name {
+        font-size: 1.25rem;
+    }
+
+    .groupHeader h2 {
+        font-size: 1.4rem;
+    }
+
+    .groupHeader {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .groupsContainer {
+        gap: 3.5rem;
+    }
+
+    .controlsWrapper {
+        margin-bottom: 2.5rem;
+        gap: 1.5rem;
+    }
+
+    .filterSection {
+        gap: 1rem;
+    }
+
+    .tabsContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .filterLabel {
+        min-width: auto;
+    }
+
+    .tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tab {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding-bottom: 3rem;
+    }
+
+    .name {
+        font-size: 1.15rem;
+    }
+}

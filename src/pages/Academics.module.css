@@ -1,0 +1,123 @@
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.intro h2 span {
+    color: var(--secondary);
+}
+
+.levelsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.levelCard {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.levelCard:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+.iconBox {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    margin: 0 auto 1.5rem;
+}
+
+.scheduleSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    background: var(--primary);
+    color: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+}
+
+.scheduleInfo h3,
+.examInfo h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.timeList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.timeList li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.examInfo p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 768px) {
+    .scheduleSection {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .levelCard {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 1.7rem;
+    }
+
+    .scheduleSection {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .scheduleInfo h3,
+    .examInfo h3 {
+        font-size: 1.2rem;
+    }
+
+    .levelsGrid {
+        grid-template-columns: 1fr;
+    }
+}

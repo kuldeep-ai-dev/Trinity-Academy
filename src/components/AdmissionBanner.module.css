@@ -1,0 +1,116 @@
+.banner {
+    position: fixed;
+    top: 130px;
+    /* Adjusted to sit below the navbar which has 120px padding in MainLayout */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, #163a70 100%);
+    color: white;
+    z-index: 900;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid var(--accent);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem var(--spacing-md);
+    gap: var(--spacing-md);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.iconBox {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sparkle {
+    color: var(--accent);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.text strong {
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.text span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.enrollBtn {
+    background-color: var(--accent);
+    color: var(--text-dark);
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: var(--radius-full);
+}
+
+.enrollBtn:hover {
+    background-color: #e2b80e;
+    transform: translateY(-2px);
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        top: 110px;
+        /* Adjust for mobile if needed */
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .text strong {
+        font-size: 1rem;
+    }
+
+    .text span {
+        display: none;
+    }
+}

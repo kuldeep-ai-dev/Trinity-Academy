@@ -1,0 +1,242 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition-normal);
+}
+
+.topBar {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.topBar :global(.container) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topInfo,
+.topSocial {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.topInfo span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.topSocial svg {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.topSocial svg:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.scrolled .nav {
+    padding: 0.7rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoImg {
+    height: 60px;
+}
+
+.scrolled .logoImg {
+    height: 50px;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.schoolName {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.location {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.desktopLinks {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: 0.2s;
+    padding: 0.5rem 0;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.navLink:hover,
+.active {
+    color: var(--primary);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    padding: 1rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.navItem:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.dropdown li a:hover {
+    background: var(--accent-light);
+    color: var(--primary);
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.mobileNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    background: white;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mobileLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobileLinkParent {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobileSubmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 1rem;
+}
+
+.mobileSubmenu a {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+@media (max-width: 992px) {
+    .desktopLinks {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .topBar {
+        display: none;
+    }
+
+    .mobileNav {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .schoolName {
+        font-size: 1.1rem;
+    }
+
+    .location {
+        font-size: 0.7rem;
+    }
+
+    .logoImg {
+        height: 48px;
+    }
+}

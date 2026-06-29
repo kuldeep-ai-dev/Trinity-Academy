@@ -1,0 +1,153 @@
+.sectionHeader {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.subTitle {
+    color: var(--secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.8rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.sectionHeader p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.facilitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: 2rem;
+}
+
+.facilityCard {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 3rem 2rem;
+    border-radius: 40px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.facilityCard:hover {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.12);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.iconWrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.iconInner {
+    position: relative;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.iconBg {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    transform: scale(0);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.facilityCard:hover .iconBg {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.facilityCard:hover .iconInner {
+    color: white !important;
+    transform: scale(1.1);
+}
+
+.facilityCard h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.facilityCard p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cardFooter {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: var(--radius-full);
+    transition: 0.4s;
+}
+
+.facilityCard:hover .line {
+    width: 100px;
+}
+
+.more {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s;
+}
+
+.facilityCard:hover .more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .sectionHeader h2 {
+        font-size: 2.2rem;
+    }
+}

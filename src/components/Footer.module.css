@@ -1,0 +1,175 @@
+.footer {
+    background-color: var(--primary);
+    color: white;
+    padding-top: var(--spacing-xl);
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.schoolInfo h3 {
+    font-size: 1.5rem;
+    margin: var(--spacing-md) 0;
+}
+
+.schoolInfo p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.footerLogo {
+    height: 80px;
+    filter: brightness(0) invert(1);
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcons a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.socialIcons a:hover {
+    background: var(--accent);
+    color: var(--text-dark);
+    transform: translateY(-5px);
+}
+
+.quickLinks h4,
+.contactInfo h4,
+.newsletter h4 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.quickLinks h4::after,
+.contactInfo h4::after,
+.newsletter h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.quickLinks ul li {
+    margin-bottom: 0.8rem;
+}
+
+.quickLinks ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.quickLinks ul li a:hover {
+    opacity: 1;
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.contactInfo ul li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
+}
+
+.contactInfo ul li svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.contactInfo ul li span {
+    font-size: 0.95rem;
+}
+
+.newsletter p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.newsletterForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletterForm input {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+.newsletterForm input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.bottomBar {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credit a {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .bottomContainer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .footerGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+    }
+}
