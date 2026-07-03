@@ -17,9 +17,9 @@ const DirectorMessage = () => {
                     </div>
                     <div className={styles.contentCol}>
                         <h2>Education as a <span>Powerful Weapon</span></h2>
-                        <p>“Education is the most powerful weapon which you can use to change the world”. These inspiring words by Nelson Mandela reminds us that school plays a vital role in shaping the future of a country.</p>
+                        <p>"Education is the most powerful weapon which you can use to change the world". These inspiring words by Nelson Mandela remind us that a school plays a vital role in shaping the future of a country.</p>
 
-                        <p>Our institution is committed in providing quality education in a safe, caring and disciplined environment. We believe that education is not limited to textbooks. It goes beyond textbook to develop confidence, moral values, leadership qualities and a sense of responsibility towards society. We at Trinity Academy encourage our students to dream big, aim higher and work harder to achieve their goals.</p>
+                        <p>Our institution is committed to providing quality education in a safe, caring and disciplined environment. We believe that education is not limited to textbooks. It goes beyond textbooks to develop confidence, moral values, leadership qualities and a sense of responsibility towards our society. We at Trinity Academy encourage our students to dream big, aim higher and work harder to achieve their goals.</p>
 
                         <blockquote>
                             "I wish all our students a bright future filled with knowledge, success and happiness."
