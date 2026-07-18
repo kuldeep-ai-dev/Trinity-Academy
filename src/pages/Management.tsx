@@ -3,11 +3,7 @@ import styles from './About.module.css';
 import logo from '../assets/logo.png';
 
 const Management = () => {
-    const members = [
-        { title: "Chairman", name: "Mr. Rajesh Baruah", role: "Trustee & Visionary" },
-        { title: "Secretary", name: "Mrs. Meena Sharma", role: "Educational Consultant" },
-        { title: "Member", name: "Dr. Vikram Gogoi", role: "Academic Advisor" },
-    ];
+    const members: { title: string; name: string; role: string }[] = [];
 
     return (
         <div>

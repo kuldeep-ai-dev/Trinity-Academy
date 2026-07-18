@@ -5,7 +5,6 @@ import styles from './Home.module.css';
 import heroImg from '../assets/hero_campus.png';
 import campusView2 from '../assets/campus_view_2.png';
 import NewsSection from '../components/NewsSection';
-import AchievementsSection from '../components/AchievementsSection';
 import EventsSection from '../components/EventsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import FacilitiesSection from '../components/FacilitiesSection';
@@ -116,7 +115,6 @@ const Home = () => {
                 </div>
             </section>
 
-            <AchievementsSection />
             <EventsSection />
             <TestimonialsSection />
         </div>
